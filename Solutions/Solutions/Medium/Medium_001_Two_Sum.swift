@@ -28,8 +28,8 @@ struct Medium_001_Two_Sum {
         for i in 0..<numbers.count {
             let numberToFind: Int = target - numbers[i]
             if let numberToFindIndex = hashMap[numberToFind] {
-                result.append(numberToFindIndex + 1)
-                result.append(i + 1)
+                result.append(numberToFindIndex)
+                result.append(i)
                 return result
             } else {
                 hashMap[numbers[i]] = i
